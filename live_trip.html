@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Trip - TripSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <style>
+        /* Custom styles to match previous theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f1d9c6, #e1bda0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full height of the viewport */
+        }
+        
+        .content {
+            flex: 1; /* Allows content to expand and pushes the footer down */
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar-nav .nav-link {
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f2a365;
+        }
+
+        .live-trip {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .live-trip h2 {
+            color: #3a0d0d;
+        }
+
+        .live-trip .alerts {
+            margin-top: 2rem;
+            color: #2e0909;
+        }
+
+        .alert-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-toggle {
+            background-color: #f2a365;
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-toggle:hover {
+            background-color: #e18a56;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+
+        .show-content {
+            display: block;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            color: #666;
+            border-top: 1px solid #e7e7e7;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: auto; /* Pushes footer to the bottom of the page */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <span class="logo"><a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo.png" height="70px" width="100px"></a></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="itinerary.html">Itinerary Planner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="live_trip.html">Live Trip</a></li>
+                        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section class="live-trip">
+            <h2>Live Trip Mode</h2>
+            <p>Real-time navigation and updates for your current trip to Udaipur.</p>
+            <button class="btn-toggle" id="toggleLiveMode">Turn Live Mode On</button>
+            <div id="liveContent" class="hidden-content">
+                <div class="alerts">
+                    <h4>Weather Alert: Sunny, 22°C</h4>
+                    <div class="alert-item">
+                        <h5>Next Destination:</h5>
+                        <p><strong>Pottery Workshop</strong></p>
+                        <p><em>Timing: 11 AM - 2 PM</em></p>
+                    </div>
+                    <div class="alert-item">
+                        <h5>Traffic Update:</h5>
+                        <p>Current traffic is light. Expect smooth travel to your next destination. However, consider taking an alternate route to avoid potential congestion near the workshop.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TripSync. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('toggleLiveMode').addEventListener('click', function() {
+            var liveContent = document.getElementById('liveContent');
+            if (liveContent.classList.contains('hidden-content')) {
+                liveContent.classList.remove('hidden-content');
+                liveContent.classList.add('show-content');
+                this.textContent = 'Turn Live Mode Off';
+            } else {
+                liveContent.classList.remove('show-content');
+                liveContent.classList.add('hidden-content');
+                this.textContent = 'Turn Live Mode On';
+            }
+        });
+    </script>
+</body>
+</html>

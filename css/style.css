@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f1d9c6, #e1bda0);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-item .nav-link {
+    color: #555;
+    transition: color 0.3s;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+    color: #f2a365;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    padding: 2rem 0;
+}
+
+.mb-5{
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2,
+h3 {
+    color: #333;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.btn-primary {
+    background-color: #f2a365;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e18a56;
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: #666;
+    border-top: 1px solid #e7e7e7;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.logo{
+    border-radius: 5px;
+}
+
+/* Itinerary Planner Page Styles */
+.itinerary {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.itinerary h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.itinerary .form-control {
+    margin: 1rem 0;
+    border-radius: 5px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+.itinerary .btn-primary {
+    background-color: #ff8903;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.itinerary .btn-primary:hover {
+    background-color: #ff8903;
+}
+
+/* Live Trip Page Styles */
+.live-trip {
+    padding: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.live-trip h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.live-trip .trip-update {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.live-trip .trip-update h4 {
+    color: #444;
+    margin-bottom: 0.75rem;
+}
+
+.live-trip .trip-update p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Feedback Page Styles */
+.feedback {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+
+.feedback h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feedback form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.feedback .form-control {
+    margin: 1rem 0;
+    border-radius: 5px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+.feedback .btn-submit {
+    background-color: #ff8903;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback .btn-submit:hover {
+    background-color: #e49335;
+}
