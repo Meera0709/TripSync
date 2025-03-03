@@ -27,7 +27,7 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/your-username/tripsync.git
+git clone https://github.com/meera0709/tripsync.git
 cd tripsync
 ```
 
