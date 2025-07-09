@@ -96,7 +96,3 @@ Contributions are welcome! To contribute:
 ## License
 MIT License. See `LICENSE` for details.
 
-## Contact
-For questions or support, contact: [your-email@example.com]
-```
-
